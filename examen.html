@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen</title>
+</head>
+<body>
+<script>
+  
+  //PUNTO 1
+
+  var numero1 = 5;
+  var numero2 = 8;
+  if(numero1 < numero2) {
+      console.log("numero1 no es mayor que numero2");
+    }
+    if(numero2 >= 0) {
+        console.log("numero2 es positivo");
+    }
+    if(numero1<0) {
+        console.log("numero1 es negativo o distinto de cero");
+    }
+    if((numero1+1) <= numero2) {
+        console.log("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+    }
+
+  //PUNTO 2
+
+  let factorial = 5;
+  let resultado2=1;
+
+  if (Number.isInteger(factorial)){
+      for (let i=1; i<=factorial; i++){
+          resultado2 *=i;
+        }
+        console.log(resultado2);
+    }else{
+        console.log("El número ingresado NO es un entero");
+    }
+
+  //PUNTO 3
+
+  function numeroPar(numero){
+      
+    if (Number.isInteger(numero)){
+            if (numero%2==0){
+                console.log("El entero: " + numero + " es un número par")
+             }else{
+                 console.log("El entero: " + numero + " es un número impar")
+                }
+            }else{
+                console.log("El número ingresado NO es un entero");
+            }
+    }
+    let resultado3 = numeroPar(4)
+
+  //PUNTO 4
+
+  let palindromo = "La ruta nos aporto otro paso natural";
+  let resultado4;
+  palindromo = palindromo.replaceAll(" ","");
+  resultado4 = palindromo.split("").reverse().join("");
+
+  if ((resultado4.toLocaleLowerCase) === (palindromo.toLocaleLowerCase)) {
+      console.log("La frase SI corresponde a un palindromo");
+    }else{
+        console.log("La frase NO corresponde a un palindromo");
+    }
+
+  //PUNTO 5
+  
+  class Persona {
+      nombre;
+      edad;
+
+      constructor(nombre, edad){
+          this.nombre = nombre;
+          this.edad = edad;
+      }
+
+      obtDetalles(){
+          return "El nombre es: " + this.nombre + " La edad es: " + this.edad;
+      }
+  }
+
+  class Estudiante extends Persona {
+      calificacion;   
+      
+      obtDetalles(){
+          return super.obtDetalles() + (" La calificación es: " + this.calificacion);
+      }
+  }
+
+  class Profesor extends Persona {
+      asignatura;
+      nivel;
+
+      constructor (nombre, edad, asignatura="JS", nivel="básico"){
+          super(nombre, edad);
+          this.asignatura = asignatura;
+          this.nivel = nivel;
+      }
+
+      obtDetalles(){
+          return super.obtDetalles() + " La asignatura es: " + this.asignatura + " El nivel es: " + this.nivel;
+      }
+  }
+
+  class Grupo {
+      profesor;
+      promedio;
+      estudiantes = [];
+
+      constructor(profesor, estudiantes){
+          this.profesor = profesor;
+          this.estudiantes = estudiantes;
+      }
+
+      calificar(){
+          for (let i=0; i < this.estudiantes.length; i++){
+              this.estudiantes[i].calificacion = Math.random()*10;
+          }
+      }
+
+      obtenerPromedio(){
+          let promedio = 0;
+          for (let i=0; i< this.estudiantes.length; i++){
+              promedio = promedio + this.estudiantes[i].calificacion;
+          }
+          return promedio = promedio / (this.estudiantes.length);
+      }
+
+      obtDetalles(){
+        return {profesor:this.profesor, estudiantes: this.estudiantes};
+
+      }
+  }
+
+  const persona1 = new Persona("Luisa", 27);
+  const estudiantes =[new Estudiante("Lupe", 15), new Estudiante("Gretel", 9), new Estudiante("Isis", 8), 
+    new Estudiante("Venus", 8), new Estudiante("Ezequiel", 5), new Estudiante("Kiki", 1)];
+
+    const profesor = new Profesor ("Amanda", "30");
+    const grupo = new Grupo(profesor,estudiantes)
+
+    console.log("Los detalles de la persona son: " + persona1.obtDetalles())
+    grupo.calificar()
+    console.log ("Los detalles del primer estudiantes es: " + estudiantes[0].obtDetalles())
+    console.log(grupo.obtDetalles())
+    console.log("El promedio del grupo es: " + grupo.obtenerPromedio())
+
+</script>
+</body>
+</html>
