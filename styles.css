@@ -1,0 +1,282 @@
+:root {
+    --blue: #007fff;
+    --blue-light: #00b1ff;
+    --blue-lighter: #1489ff;
+    --blue-darker: #0073e6;
+    --blue-dark: #002b39;
+    --gray-border: #dfeaf0;
+    --gray-shadow: rgba(153, 176, 190, 0.35);
+    --white-light: #f0faff;
+}
+
+body {
+    font-family: "Hind", sans-serif;
+}
+
+h1, h2 {
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+}
+
+p {
+    font-weight: 100;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-image: linear-gradient(to top, var(--blue), var(--blue-light) -10%);
+    display: block;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 9px 12px 0 var(--gray-shadow);
+    color: white;
+    cursor: pointer;
+    padding: 15px 45px 11px 46px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+footer {
+    background-image: linear-gradient(90deg, var(--blue-lighter) 0%, var(--blue-darker) 100%);
+    padding: 40px 140px;
+}
+
+.header {
+    background-image: url("/images/header_bck.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin: 0 auto;
+    max-width: 100vw;
+    padding-bottom: 4%;
+}
+
+.center-container {
+    width: 100%;
+}
+
+.center-content {
+    display: block;
+    margin: 0 auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.card-container {
+    margin-bottom: 6rem;
+    height: 250px;
+}
+
+.card {
+    background-image: linear-gradient(to bottom, white, white 76%, var(--white-light));
+    border: solid 1px var(--gray-border);
+    border-radius: 10px;
+    box-shadow: 0 25px 35px 0 rgb(26 72 100 / 20%);
+}
+
+.card-grid {
+    margin: 51px auto 0 auto;
+    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    max-width: 700px;
+    padding: 40px 29px;
+}
+
+.card-content {
+    display: flex;
+}
+
+.card-content > div {
+    flex: 1
+}
+
+.card-image {
+    height: 237px;
+    width: 237px;
+}
+
+.card-stars {
+    text-align: end;
+}
+
+.star-image {
+    height: 20px;
+    width: 20px;
+}
+
+.card-title {
+    font-size: 27px;
+    line-height: 32px;
+    color: var(--blue-dark);
+    font-weight: 500;
+}
+
+.card-subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--blue-lighter);
+    font-weight: 500;
+}
+
+.card-paragraph {
+    color: var(--blue-dark);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.tool {
+    padding-bottom: 4%;
+}
+
+.tools-content {
+    margin: 0 auto 29px;
+    padding: 0 50px;
+    width: 80%;
+}
+
+.tool-card {
+    margin-right: 3%;
+    padding: 8px 26px 26px 26px;
+    text-align: center;
+}
+
+.tool-paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.services {
+    background-image: url("/images/services_bck.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-bottom: 4%;
+}
+
+.services-container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.services-list {
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 35px;
+}
+
+.services-item {
+    color: var(--blue-dark);
+    margin: 15px 6%;
+    padding: 22px 5%;
+    text-align: center;
+    width: 90%;
+}
+
+.services-image {
+    height: 35px;
+    margin-bottom: 2px;
+    width: 35px;
+}
+
+.footer-top {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+.footer-top > div {
+    flex: 1
+}
+
+.footer-top-networks {
+    text-align: end;
+    padding-top: 30px;
+}
+
+.footer-top-networks > img {
+    padding-left: 25px;
+}
+
+.footer-bottom {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 42px;
+    width: 100%;
+}
+
+.footer-bottom > div {
+    display: grid;
+    font-size: 14px;
+    grid-column: 2;
+    grid-template-columns: auto auto auto;
+    margin-right: 0;
+    right: 0;
+    width: 100%;
+}
+
+.footer-text {
+    color: white;
+    font-weight: 500;
+    line-height: 1em;
+    padding-bottom: 10px;
+    text-align: end;
+}
+
+.steps {
+    padding-bottom: 4%;
+}
+
+.step-number {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+}
+.step-number > div {
+    flex: 1;
+    text-align: center;
+}
+
+.step-container {
+    width: 60%;
+    padding-top: 4.4vw;
+    margin: -62px auto 0;
+    display: flex;
+    position: relative;
+}
+
+.step-point {
+    flex: 1;
+    text-align: center;
+    z-index: 1;
+}
+
+.step-point > p {
+    font-size: 18px;
+    line-height: 1.1em;
+}
+
+.step-line {
+    background-image: url("images/step_line.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    top: 43%;
+    left: 16%;
+}
