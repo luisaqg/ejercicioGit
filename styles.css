@@ -6,6 +6,7 @@
     --blue-darker: #0073e6;
     --blue-dark: #002b39;
     --gray-border: #dfeaf0;
+    --gray-lighter: #c3d5e0;
     --gray-shadow: rgba(153, 176, 190, 0.35);
     --white-light: #f0faff;
 }
@@ -192,7 +193,7 @@ footer {
     min-height: unset;
     border-radius: 10px;
     box-shadow: 0 15px 15px 0 rgb(26 72 100 / 15%);
-    border: solid 1px #c3d5e0;
+    border: solid 1px var(--gray-lighter);
     background-image: linear-gradient(to bottom, white 45%, white 78%, #f8fcff);
 }
 
@@ -360,8 +361,8 @@ footer {
     padding: 22px 5%;
     border-radius: 10px;
     box-shadow: 0 20px 15px 0 rgb(26 72 100 / 10%);
-    border: solid 1px #c3d5e0;
-    background-image: linear-gradient(to bottom, #fff, #fff 78%, #f0feff);
+    border: solid 1px var(--gray-lighter);
+    background-image: linear-gradient(to bottom, white, white 78%, #f0feff);
     text-align: center;
     font-size: 16px;
     line-height: 21px;
@@ -517,6 +518,60 @@ footer {
 
 .steps .center-text {
     padding: 2% 0;
+}
+
+.steps-mobile-container {
+    max-width: 238px;
+    margin: 0 auto;
+}
+
+.steps-mobile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem 0 1rem;
+    margin-bottom: 2.5rem;
+    border: solid 1px var(--gray-lighter);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 20px 15px 0 rgb(26 72 100 / 10%);
+}
+
+.steps-mobile-card img {
+    margin-bottom: 1rem;
+}
+.steps-mobile-card div {
+    font-size: 18px;
+    line-height: 23px;
+    min-height: 5rem;
+    color: var(--blue-dark);
+}
+
+.steps-mobile-numbers {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("images/step_line.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.steps-mobile-numbers div {
+    height: 35px;
+    width: 35px;
+}
+
+.steps-mobile-numbers div:nth-child(1) {
+    background: url("images/number1.svg");
+}
+
+.steps-mobile-numbers div:nth-child(2) {
+    background: url("images/number2.svg");
+}
+
+.steps-mobile-numbers div:nth-child(3) {
+    background: url("images/number3.svg");
 }
 
 @media only screen and (max-width: 767px) {
@@ -714,6 +769,19 @@ footer {
         padding: 30px 0;
     }
 
+    .step-parent {
+        display: none;
+    }
+
+    .steps-mobile {
+        display: block;
+        padding-bottom: 37px;
+    }
+
+    .steps .center-text {
+        padding: 11px 0 30px;
+    }
+
     .services {
         margin-top: 80px;
         padding-top: 90px;
@@ -784,9 +852,6 @@ footer {
     }
 }
 
-.header, .tool, .services, footer {
-    display: none  ;
-}
 @media only screen and (min-width: 940px) {
     .has-padding {
         padding-top: 50px;
@@ -814,6 +879,10 @@ footer {
     .steps .title .title-container {
         margin-top: 0;
         padding: 2%;
+    }
+
+    .steps-mobile {
+        display: none;
     }
 
     .services {
