@@ -898,3 +898,14 @@ footer {
         margin-bottom: 65px;
     }
 }
+
+@media only screen and (max-width: 1199px) and (min-width: 769px) {
+    .tools-content {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+    .tool-card:not(:first-child) {
+        display: none;
+    }
+}
