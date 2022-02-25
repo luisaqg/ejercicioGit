@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: "Hind", sans-serif;
+    font-family: BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
 h1, h2 {
@@ -733,9 +733,6 @@ footer {
     }
 }
 
-.header, .tool, .services, footer {
-    display: none  ;
-}
 @media only screen and (min-width: 940px) {
     .has-padding {
         padding-top: 50px;
