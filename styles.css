@@ -74,6 +74,7 @@ a {
     border-radius: 5px;
     font-size: 18px;
     font-weight: 700;
+    font-family: "Hind", sans-serif;
     background-image: linear-gradient(0deg, var(--blue) 0%, var(--blue-light) 100%);
     background-color: white;
     display: inline-block;
@@ -420,10 +421,6 @@ footer {
     text-align: end;
 }
 
-.steps {
-    padding-bottom: 4%;
-}
-
 .step-number {
     width: 100%;
     margin: 0 auto;
@@ -438,12 +435,36 @@ footer {
 }
 
 .step-container {
-    width: 60%;
+    margin: -3.7vw auto -4.5vw !important;
+    width: 100%;
+    max-width: 862px;
     padding-top: 4.4vw;
     padding-bottom: 2%;
-    margin: -62px auto 0;
     display: flex;
     position: relative;
+    background-image: url("images/step_line.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 90%;
+}
+
+.step-titles {
+    width: 100%;
+    max-width: 999px;
+    padding: 8px 0 4px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.step-titles > div {
+    flex: 1;
+    text-align: center;
+}
+
+.step-titles div p {
+    font-size: clamp(18px,1.6vw,22px);
+    line-height: 1.1em;
+    font-family: "Hind", sans-serif;
 }
 
 .step-point {
@@ -452,20 +473,50 @@ footer {
     z-index: 1;
 }
 
-.step-point > p {
-    font-size: 18px;
-    line-height: 1.1em;
+.step-point div {
+    height: 200px;
+    max-height: 200px;
+    max-width: 100%;
+    cursor: pointer;
 }
 
-.step-line {
-    background-image: url("images/step_line.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 70%;
-    height: 3px;
-    top: 43%;
-    left: 16%;
+.step-point-img-1 {
+    background: url("images/step1.png") no-repeat left;
+    background-size: contain;
+}
+.step-point-img-1:hover {
+    background: url("images/step1_hover.svg") no-repeat left;
+    background-size: contain;
+}
+
+.step-point-img-2 {
+    background: url("images/step2.png") no-repeat center;
+    background-size: contain;
+}
+.step-point-img-2:hover {
+    background: url("images/step2_hover.svg") no-repeat center;
+    background-size: contain;
+}
+
+.step-point-img-3 {
+    background: url("images/step3.png") no-repeat right;
+    background-size: contain;
+}
+.step-point-img-3:hover {
+    background: url("images/step3_hover.svg") no-repeat right;
+    background-size: contain;
+}
+
+.step-point-3 {
+    text-align: right;
+}
+
+.step-point-1 {
+    text-align: left;
+}
+
+.steps .center-text {
+    padding: 2% 0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -733,6 +784,9 @@ footer {
     }
 }
 
+.header, .tool, .services, footer {
+    display: none  ;
+}
 @media only screen and (min-width: 940px) {
     .has-padding {
         padding-top: 50px;
