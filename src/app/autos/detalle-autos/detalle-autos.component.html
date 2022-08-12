@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-heard">
+       <h3>{{tituloPagina + ': ' + auto?.modelo}}</h3> 
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+        </div>
+    </div>
+
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <p class="category">Marca:</p>
+                                <p class="category">Modelo:</p>
+                                <p class="category">Año:</p>
+                                <p class="category">Color:</p>
+                                <p class="category">Kilometros:</p>
+                                <p class="category">Precio:</p>
+                                <p class="category">Calificación:</p>
+                            </div>
+                            <div class="col-sm">
+                                <p>{{auto?.marca}}</p>
+                                <p>{{auto?.modelo}}</p>
+                                <p>{{auto?.anio}}</p>
+                                <p>{{auto?.color}}</p>
+                                <p>{{auto?.kilometros | number}}</p>
+                                <p>{{auto?.precio | currency}}</p>
+                                <estrellas [calificacion]="auto!.calificacion">
+                                </estrellas>
+                                <button class="btn btn-outline-primary" 
+                                    (click)="comprar()">
+                                    <fa-icon [icon]="faShoppingCart" size="sm"></fa-icon>
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                </div>
+                <div class="col-sm">
+                    <img class="image" [src]="auto!.imagenUrl">
+                </div>
+            </div>
+        </div>
+      </div>
+ 
+    <div class="card-footer">
+        <button class="btn btn-outline-secondary" style="width: 110px"
+        (click)="onBack()">
+        <fa-icon [icon]="faChevronLeft" size="sm"></fa-icon> &nbsp;Regresar
+        </button>
+    </div>
+</div>
