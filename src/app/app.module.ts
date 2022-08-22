@@ -11,6 +11,7 @@ import { EstrellasComponent } from './shared/estrellas/estrellas.component';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DetalleAutoGuard } from './autos/detalle-auto.guard';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DetalleAutoGuard } from './autos/detalle-auto.guard';
     DetalleAutosComponent,
     AEspacioPipe,
     EstrellasComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,8 @@ import { DetalleAutoGuard } from './autos/detalle-auto.guard';
       {path: "auto/:id", component: DetalleAutosComponent,
       canActivate: [DetalleAutoGuard] },
       {path: "welcome", component: WelcomeComponent},
+      {path: "registro", component: RegistroComponent},
+      {path: "", component: WelcomeComponent},
       {path: "", redirectTo: "welcome", pathMatch: "full"},
       {path: "**", redirectTo: "welcome", pathMatch: "full"}
     ])

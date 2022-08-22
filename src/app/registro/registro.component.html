@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header">
+        <h3>{{tituloPagina}}</h3>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" [(ngModel)]="cliente.nombre" class="form-control" id="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" [(ngModel)]="cliente.password" class="form-control" id="password">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" [(ngModel)]="contacto" class="form-check-input" id="proporcionaDatos">
+                <label for="proporcionaDatos" class="form-label">¿Desea contacto?</label>  
+            </div>
+            <div class="mb-3" *ngIf="contacto">
+                <label for="correo" class="form-label">Dirección de correo</label>
+                <input type="email" [(ngModel)]="cliente.email" class="form-control" id="email">
+                <div id="correoHelp" class="form-text">Nunca compartiremos tu correo con nadie</div>
+            </div>
+            <div class="mb-3" *ngIf="contacto">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="number" [(ngModel)]="cliente.telefono" class="form-control" id="telefono">
+                <div id="telefonoHelp" class="form-text">Tu teléfono está seguro con nosotros</div>
+            </div>
+            <div class="d-md-block">
+                <button class="btn btn-primary" type="button" (click)="Registrarse()">Registra cliente </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer container row col-12 flex justify-content-center align-middle">
+        <button class="btn btn-outline-secondary" style="width:110px" (click)="irInicio()">
+            Inicio
+        </button>
+    </div>
+</div>
